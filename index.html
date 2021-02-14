@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
- 
+
   <!-- style for the loader -->
   <style>
     .arjs-loader {
@@ -27,34 +27,77 @@
   </style>
 </head>
 
+
 <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
 <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
 <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+
 <body style="margin: 0px; overflow: hidden">
+  
   <a-scene embedded vr-mode-ui="enabled: false"
     arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
     <!-- assets -->
     <a-assets>
+      <img id="swan" src="./gif/swan.gif">
+      <img id="wolf" src="./gif/wolf.gif"> -->
+      <img id="seahorses" src="./gif/seahorses.gif">
       <img id="parrot" src="./gif/parrot.gif">
+      <img id="gibbon" src="./gif/gibbon.gif">
+      <img id="swan_two" src="./gif/swan_two.gif">
+      <img id="wolf_two" src="./gif/wolf_two.gif">
+      <img id="seahorses_two" src="./gif/seahorses_two.gif">
+      <img id="parrot_two" src="./gif/parrot_two.gif">
+      <img id="gibbon_two" src="./gif/gibbon_two.gif">
     </a-assets>
 
     <a-marker type='barcode' value='1'>
-      <a-entity geometry="primitive:box;width:1.5;height:1.5;depth:1.5;"
-        material="shader:gif;src:#parrot">
-      </a-entity>
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader: gif; src: #swan;"></a-entity>
     </a-marker>
 
     <a-marker type='barcode' value='2'>
-      <a-entity geometry="primitive:plane;width:2;height:2;" position="-1.2 2.375 -1"
-        material="shader:gif;src:#parrot;color:orange">
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader:gif; src: #wolf;">
       </a-entity>
     </a-marker>
 
     <a-marker type='barcode' value='3'>
-      <a-entity geometry="primitive:circle;segments:64" position="-1.2 0.125 -1"
-        material="shader:gif;src:#parrot;opacity:.2;color:blue">
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader:gif; src: #seahorses;">
+      </a-entity>
+    </a-marker>
+
+    <a-marker type='barcode' value='4'>
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader:gif; src: #parrot;">
+      </a-entity>
+    </a-marker>
+
+    <a-marker type='barcode' value='5'>
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader:gif; src: #gibbon;">
+      </a-entity>
+    </a-marker>
+
+    <a-marker type='barcode' value='6'>
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader:gif; src: #swan_two;">
+      </a-entity>
+    </a-marker>
+
+    <a-marker type='barcode' value='7'>
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader:gif; src: #wolf_two;">
+      </a-entity>
+    </a-marker>
+
+    <a-marker type='barcode' value='8'>
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader:gif; src: #seahorses_two;">
+      </a-entity>
+    </a-marker>
+
+    <a-marker type='barcode' value='9'>
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader:gif; src: #parrot_two;">
+      </a-entity>
+    </a-marker>
+
+    <a-marker type='barcode' value='10'>
+      <a-entity geometry="primitive:box;width:2;height:2" material="shader:gif; src: #gibbon_two;">
       </a-entity>
     </a-marker>
 
